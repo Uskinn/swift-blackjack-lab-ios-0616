@@ -13,29 +13,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    /**
-     
-     * Declare any custom properties here.
-     
-     */
+    var dealer: Dealer! = nil
+    
+    
+    
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        /*
-         
-         * Call your custom classes here when running the scheme.
-         
-         */
+        let house = House(name: "Bert")
+        let player = Player(name: "Jimbo")
+           
+        dealer = Dealer(house: house, player: player)
+    
         
-        // Do not alter
-        return true  //
-    }   ///////////////
+        
+        return true
+    }
     
-    /*
-     
-     * Write your playBlackjack method in here
-     
-     */
+    func playBlackJack() {
+        
+        
+    }
     
-}
+
+    
+   }
 

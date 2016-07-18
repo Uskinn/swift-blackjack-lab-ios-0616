@@ -244,7 +244,7 @@ class PlayerSpec: QuickSpec {
                 it("should add 10 to the tokens when the bet is 10") {
                     let tokens = player.tokens
                     let bet: UInt = 10
-                    player.didWin(bet)
+                    player.didWin(bet: Int(bet))
                     
                     expect(player.tokens).to(equal(tokens + bet))
                 }
@@ -252,7 +252,7 @@ class PlayerSpec: QuickSpec {
                 it("should add 20 to the tokens when the bet is 20") {
                     let tokens = player.tokens
                     let bet: UInt = 20
-                    player.didWin(bet)
+                    player.didWin(bet: Int(bet))
                     
                     expect(player.tokens).to(equal(tokens + bet))
                 }
@@ -262,17 +262,17 @@ class PlayerSpec: QuickSpec {
                 it("should subtract 10 from the tokens when the bet is 10") {
                     let tokens = player.tokens
                     let bet: UInt = 10
-                    player.didLose(bet)
+                    player.didLose(bet: Int(bet))
                     
-                    expect(player.tokens).to(equal(tokens - bet))
+                    expect(player.tokens).to(equal(tokens - Int(bet)))
                 }
                 
                 it("should subract 20 from the tokens when the bet is 20") {
                     let tokens = player.tokens
                     let bet: UInt = 20
-                    player.didLose(bet)
+                    player.didLose(bet: Int(bet))
                     
-                    expect(player.tokens).to(equal(tokens - bet))
+                    expect(player.tokens).to(equal(tokens - Int(bet)))
                 }
             }
             
